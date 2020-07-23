@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import styled from '@emotion/styled';
 import Formulario from './components/Formulario';
+import Resumen from './components/Resumen';
 
 const Contenedor = styled.div`
 max-width: 600px;
@@ -35,6 +36,8 @@ function App() {
 
       <ContenedorFormulario>
         <Formulario guardarResumen={guardarResumen} />
+
+        <Resumen />
       </ContenedorFormulario>
     </Contenedor>
   );
