@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import styled from '@emotion/styled';
@@ -15,13 +15,26 @@ padding: 3rem;
 `;
 
 function App() {
+  
+  const [resumen, guardarResumen] = useState({
+    cotizacion: 0,
+    datos: {
+      marca: '',
+      year: '',
+      plan: ''
+    }
+  })
+
+  // Extraer datos
+  const { datos } = resumen;
+
   const titulo = 'Cotizador de Seguros'
   return (
     <Contenedor>
       <Header titulo={titulo} />
 
       <ContenedorFormulario>
-        <Formulario />
+        <Formulario guardarResumen={guardarResumen} />
       </ContenedorFormulario>
     </Contenedor>
   );

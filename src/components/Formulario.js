@@ -52,7 +52,7 @@ text-align: center;
 margin-bottom: 2rem;
 `;
 
-const Formulario = () => {
+const Formulario = ({ guardarResumen }) => {
 
     const [datos, guardarDatos] = useState({
         marca: '',
@@ -90,7 +90,7 @@ const Formulario = () => {
 
         // Por cada año se resta el 3%
         resultado -= ((diferencia * 3) * resultado) / 100;
-        
+
         // Americano 15%
         // Asiatico 5%
         // Europeo 30%
@@ -99,9 +99,9 @@ const Formulario = () => {
         // Básico aumenta 20%
         // Completo 50%
         const incrementoPlan = obtenerPlan(plan);
-        resultado = parseFloat( incrementoPlan * resultado).toFixed(2);
+        resultado = parseFloat(incrementoPlan * resultado).toFixed(2);
 
-        console.log(resultado);
+        guardarResumen(resultado);
     }
 
     return (
