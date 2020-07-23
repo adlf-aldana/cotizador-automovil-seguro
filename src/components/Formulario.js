@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import { obtenerDiferenciaYear } from "../helper";
 
 const Campo = styled.div`
 display: flex;
@@ -80,6 +81,10 @@ const Formulario = () => {
         }
 
         guardarError(false)
+
+        // Obteniendo diferencia de años
+        const diferencia = obtenerDiferenciaYear(year);
+        console.log(diferencia);
     }
 
     return (
