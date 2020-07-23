@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import './App.css';
 import Header from './components/Header';
-import styles from '@emotion/styled';
+import styled from '@emotion/styled';
+import Formulario from './components/Formulario';
 
 const Contenedor = styled.div`
 max-width: 600px;
@@ -20,7 +21,7 @@ function App() {
       <Header titulo={titulo} />
 
       <ContenedorFormulario>
-        
+        <Formulario />
       </ContenedorFormulario>
     </Contenedor>
   );
