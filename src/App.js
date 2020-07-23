@@ -16,7 +16,7 @@ padding: 3rem;
 `;
 
 function App() {
-  
+
   const [resumen, guardarResumen] = useState({
     cotizacion: 0,
     datos: {
@@ -37,7 +37,7 @@ function App() {
       <ContenedorFormulario>
         <Formulario guardarResumen={guardarResumen} />
 
-        <Resumen />
+        <Resumen datos={datos} />
       </ContenedorFormulario>
     </Contenedor>
   );

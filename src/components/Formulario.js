@@ -101,7 +101,10 @@ const Formulario = ({ guardarResumen }) => {
         const incrementoPlan = obtenerPlan(plan);
         resultado = parseFloat(incrementoPlan * resultado).toFixed(2);
 
-        guardarResumen(resultado);
+        guardarResumen({
+            cotizacion: resultado,
+            datos
+        });
     }
 
     return (

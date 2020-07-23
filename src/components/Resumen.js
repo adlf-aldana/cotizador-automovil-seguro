@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const Resumen = () => {
+const Resumen = ({ datos }) => {
+
+    console.log(datos);
+    // Extraer datos
+    const { marca, year, plan } = datos;
+
+    // Si no hay datos no muestra el componente
+    if (marca === '' || year === '' || plan === '') return null;
+
     return (
-        <h1>Desde resumen</h1>
+        <Fragment>
+            <h2>Resumen de Cotizacion</h2>
+            <ul>
+                <li>Marca: </li>
+                <li>Plan: </li>
+                <li>Año del año: </li>
+            </ul>
+        </Fragment>
     );
 }
 
