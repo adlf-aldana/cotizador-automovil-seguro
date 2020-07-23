@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { calcularMarca } from '../helper';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import PropTypes from 'prop-types';
 
