@@ -28,7 +28,7 @@ function App() {
   })
 
   // Extraer datos
-  const { datos } = resumen;
+  const { cotizacion, datos } = resumen;
 
   const titulo = 'Cotizador de Seguros'
   return (
@@ -40,7 +40,7 @@ function App() {
 
         <Resumen datos={datos} />
 
-        <Resultado />
+        <Resultado cotizacion={cotizacion} />
       </ContenedorFormulario>
     </Contenedor>
   );
