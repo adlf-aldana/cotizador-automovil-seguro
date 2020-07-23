@@ -84,7 +84,13 @@ const Formulario = () => {
 
         // Obteniendo diferencia de años
         const diferencia = obtenerDiferenciaYear(year);
-        console.log(diferencia);
+
+        // Base de 2000
+        let resultado = 2000;
+
+        // Por cada año se resta el 3%
+        resultado -= ((diferencia * 3) * resultado) / 100;
+        console.log(resultado);
     }
 
     return (
