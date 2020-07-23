@@ -109,7 +109,7 @@ const Formulario = ({ guardarResumen, guardarCargando }) => {
             guardarCargando(false)
             
             guardarResumen({
-                cotizacion: resultado,
+                cotizacion: Number(resultado),
                 datos
             });
         }, 3000);

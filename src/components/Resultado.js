@@ -34,13 +34,13 @@ const Resultado = ({ cotizacion }) => {
                 <ResultadoCotizacion>
                     {/* la animacion lo toma de index.css con el nombre resultado */}
                     <TransitionGroup
-                        component="p"
+                        component="span"
                         className="resultado">
                         <CSSTransition
                             classNames="resultado"
                             key={cotizacion}
                             timeout={{ enter: 500, exit: 500 }}>
-                            <TextoCotizacion>El total es: $ {cotizacion}</TextoCotizacion>
+                            <TextoCotizacion>El total es: $ <span> {cotizacion} </span></TextoCotizacion>
                         </CSSTransition>
                     </TransitionGroup>
                 </ResultadoCotizacion>
